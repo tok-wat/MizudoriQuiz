@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>初めのページ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+       
+<div class="quiz">
+    <div class="inner-block">
+        <div id  = "quiz-top"></div> 
+            <h1>漫湖水鳥・湿地センタークイズ</h1>
+        <div id = "quiz-below">
+            <a href="quiz_text.html"><div class="start", style = "background-color: rgb(247, 108, 136);">雑学クイズ</div></a>
+            <a href="quiz_image.html"><div class="start", style = "background-color: rgb(247, 199, 152);">写真クイズ</div></a>
+            <a href="quiz_kanji.html"><div class="start", style = "background-color: rgb(63, 243, 243);">漢字テスト</div></a>
+            <a href="quiz_uchina.html"><div class="start", style = "background-color: rgb(138, 223, 142);">方言クイズ</div></a>
+        </div>
+    </div>
+</div>
+<div id = "footer" class = "footer", style = "text-align: right;">効果音はOtoLogicの素材を使用しています。https://otologic.jp/ </div>
+
+</body>
+</html>
+
+<script>
+//キー操作での選択
+function selectQuiz(){
+  document.addEventListener("keydown", keydownEvent, false)
+  function keydownEvent(event){
+    if(event.key === "a" || event.key === "A"){
+      window.location.href = "./quiz_text.html";
+    } else if(event.key === "b" || event.key === "B"){
+      window.location.href = "./quiz_image.html"; 
+    } else if(event.key === "c" || event.key === "C"){
+      window.location.href = "./quiz_kanji.html"; 
+    } else if(event.key === "d" || event.key === "D"){
+      window.location.href = "./quiz_uchina.html";} 
+    }
+}
+selectQuiz()
+</script>
