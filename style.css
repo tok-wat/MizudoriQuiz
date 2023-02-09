@@ -1,0 +1,272 @@
+body{
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  margin: 0;
+  height: 95vh;
+  background-color: #fffaf0;
+}
+a {
+  text-decoration:none
+}
+
+.inner-block {
+  width: 80%;
+  height: 640px;
+  margin: 0px auto;
+  padding: 15px;
+  max-width: 1500px;
+  /*background-color:  #eee7e7;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* 問題 */
+#quiz-top{
+  width: 100%;
+  height: 140px;
+  margin: 0;
+}
+#quiz-number {       /*第X問*/
+  height: 100px ;
+  width: 100px;
+  border-radius: 50%;
+  text-align:center;
+  line-height: 100px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  margin: 10px 10px 10px 30px;
+  background-color: #1e90ff;
+  display: inline-block;
+  vertical-align: middle ;
+}
+#quiz-question { /*問題本文*/
+  font-size: 35px;
+  width: calc(100% - 210px);
+  padding: 10px;
+  margin: 10px;
+  /*background-color:  #c99494;*/
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle ;
+}
+.quiz-below{
+  width: 100%;
+  height: 500px;
+  margin: 0;
+}
+#options-text{
+  width:100%;
+  height: 100%;
+  vertical-align: top;
+}
+#options-image{
+  width: calc(100% - 510px);
+  height: 100%;
+  display:inline-block;
+  vertical-align: top;
+}
+
+/* 写真問題・漢字問題 */
+/* 問題の写真 */
+
+.quiz-image {
+  padding: 15px;
+  width: 450px;
+  height: 450px;
+  margin: 0 10px ;
+  display:inline-block;
+  vertical-align: top;
+}
+.image-class{
+  width: 450px;
+  height:auto;
+}
+/* 問題の漢字 */
+.quiz-kanji {
+  padding: 50px 0;
+  font-size: 220px;
+  font-weight: bold;
+  text-align: center;
+  width: 450px;
+  height: 450px;
+  margin: 0 10px ;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+/* 選択肢 */
+.quiz-option{
+  width: 80%;
+  height: 50px;
+  margin: 24px auto;
+  font-size: 30px;
+  padding: 20px;
+  line-height: 50px; 
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.3), 10px 10px 10px rgba(0,0,0,0.2);
+  float: center;
+  cursor: pointer;
+}
+   /*ボタンをクリックしたときのアニメ*/
+   .quiz-option:hover {
+    text-decoration: none; /* リンクに出てくる下線を無効にする*/   
+    box-shadow: none;
+    transform: translateY(5px); 
+  }
+  .quiz-option:active{
+    color: #ffffff; /* 文字色を白にする */
+    text-decoration: none; /* リンクに出てくる下線を無効にする*/  
+    box-shadow: none;  
+  }
+
+
+/*開始ページ*/
+.start {
+  width: 170px;
+  height: 170px;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 20px;
+  margin : 20px ;
+  cursor: pointer;
+  text-align:center;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 170px;
+  color: #333;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.3), 10px 10px 10px rgba(0,0,0,0.2);
+  }
+.start:hover{
+  text-decoration: none; /* リンクに出てくる下線を無効にする*/   
+  box-shadow: none;
+  color: black;
+  transform: translateY(5px); 
+}
+.start:active{
+  color: #ffffff; /* 文字色を白にする */
+  text-decoration: none; /* リンクに出てくる下線を無効にする*/  
+  box-shadow: none;  
+}
+
+/*結果のページ*/
+.results {
+  width: calc(100% - 60px);
+  height: 400px;
+  font-size: 50px;
+  display: inline-block;
+ }
+ .score {
+  text-align:center;
+  width: calc(100% - 60px);
+  height: 200px;
+  line-height: 150px;
+  margin : 10px auto 10px;
+  font-size: 150px;
+  font-weight: bold;
+ }
+.btn_restart{
+  width: 300px;
+  border-radius: 5px;
+  background-color: darkgrey;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.3), 10px 10px 10px rgba(0,0,0,0.2);
+  padding: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  margin: 10px  auto;
+  vertical-align:top;
+}
+.btn_restart:hover {
+  text-decoration: none; /* リンクに出てくる下線を無効にする*/   
+  box-shadow: none;
+  transform: translateY(5px); 
+}
+.btn_restart:active{
+  color: #ffffff; /* 文字色を白にする */
+  text-decoration: none; /* リンクに出てくる下線を無効にする*/    
+}
+
+/*フッター*/
+.footer{
+  width: 95%;
+  height: 70px;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+}
+#quit-btn{
+  display:block;
+  margin: 5px 50px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.3), 6px 6px 6px rgba(0,0,0,0.2);
+  background-color: darkgrey;
+  cursor: pointer;
+  font-size: 15px;
+  float: right;
+}
+  #quit-btn:hover {
+    text-decoration: none; /* リンクに出てくる下線を無効にする*/   
+    box-shadow: none;
+    transform: translateY(5px); 
+  }
+  #quit-btn:active{
+    color: #ffffff; /* 文字色を白にする */
+    text-decoration: none; /* リンクに出てくる下線を無効にする*/    
+  }
+
+/*オーバーレイ*/
+#overlay, #pause{
+  position: fixed;
+  top:0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0,0,0,0.8);
+  transition: all 0.5s ease-out;
+}
+#overlay.overlay-on, #pause.pause-on{
+  visibility: visible;
+  opacity: 1;
+}
+.flex{
+  width: 100%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+#overlay-inner, #pause-inner{
+  padding:40px;
+  background-color: #eee7e7f1;
+  text-align:center;
+  border-radius: 30px; 
+}
+#open-btn, #close-btn, #start-btn{
+  display:inline-block;
+  margin:20px;
+  padding:20px 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.3), 10px 10px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  font-size: 20px;
+}
+#open-btn:hover, #close-btn:hover, #start-btn:hover {
+  text-decoration: none; /* リンクに出てくる下線を無効にする*/   
+  box-shadow: none;
+  transform: translateY(5px); 
+}
+#open-btn:active, #close-btn:active, #start-btn:active{
+  color: #ffffff; /* 文字色を白にする */
+  text-decoration: none; /* リンクに出てくる下線を無効にする*/    
+}
+
