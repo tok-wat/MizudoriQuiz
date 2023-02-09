@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>写真クイズ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>     
+<div class="inner-block">
+  <div id = "quiz-top">
+    <div id = "quiz-number"></div>
+    <div id = "quiz-question">この写真の生き物はうちなーぐちで何と呼ぶでしょうか？</div>
+  </div>
+  <div class="quiz-below">
+    <div class = "quiz-image", id="questionPhoto">
+    </div>
+    <div id = "options-image">
+        <div class = "quiz-option", id = "op_a", style = "background-color: rgb(247, 108, 136);"></div>
+        <div class = "quiz-option", id = "op_b", style = "background-color: rgb(247, 199, 152);"></div>
+        <div class = "quiz-option", id = "op_c" style = "background-color: rgb(63, 243, 243);"></div>
+        <div class = "quiz-option", id = "op_d", style = "background-color: rgb(138, 223, 142);"></div>
+    </div>
+  </div>
+</div>
+
+<div id = "footer" class = "footer"> <button id = "quit-btn" type = button>クイズをやめる</botton></div>
+
+<!-- 正解・不正解のオーバーレイ -->
+<div id="overlay" class="overlay-event">
+    <div class="flex">
+      <div id="overlay-inner">
+        <div id ="answer"></div>
+        <button id="close-btn" class="overlay-event" type=button, style = "background-color: darkgrey;">次に進む</button>
+      </div>
+    </div>
+</div>
+
+<!-- 中断・始めに戻るオーバーレイ -->
+<div id="pause" class="pause-event">
+  <div class="flex">
+    <div id="pause-inner">
+      <div style = 'font-size:40px'>クイズを終了しますか？</div>
+      <br>
+      <button id="close-btn" class="pause-event" type=button, style = "background-color: rgb(247, 108, 136);">クイズに戻る</button>
+      <a href="index.html"><button id="start-btn" class="pause-event" type=button, style = "background-color: rgb(247, 199, 152);">クイズをやめる</button</a>
+    </div>
+  </div>
+</div>
+  
+
+<script src = "./js/common.js"></script>
+<script src = "./js/image_quiz.js"></script>
+<script>
+
+
+let textQuestions = readCsv("./csv/uchina_quiz.csv")
+textQuestions = selectQuestion(textQuestions, n_questions) 
+quiz(textQuestions)
+document.oncontextmenu = function () {return false;}
+</script>
+
+</body>
+</html>
