@@ -259,6 +259,7 @@ a {
   box-shadow: 0 5px 0 rgba(0,0,0,0.3), 10px 10px 10px rgba(0,0,0,0.2);
   cursor: pointer;
   font-size: 20px;
+  line-height: 20px;
 }
 #open-btn:hover, #close-btn:hover, #start-btn:hover {
   text-decoration: none; /* リンクに出てくる下線を無効にする*/   
